@@ -23,7 +23,7 @@
                 <li>Guess correctly and win a prize</li>
                 <li>Click Guess when you are ready to start</li>
             </ol>
-            <button onclick="guess()">Guess</button>
+            <button onclick= "startGame()" >Guess</button>
             </div>
         </div>
     <!--------------------------------------------------->
@@ -35,9 +35,13 @@
             <div class= col-md-4>
                 <h3>Score</h3>
                 <p>Wins </p> 
-                <p class = "wins">0</p>
+                <span id = "winner"> 0 </span>
                 <p>Loses</p>
-                <p class = "Loses">0 </p>
+                <p id = "Loses">0 </p>
+                <p>Guesses left</p>
+                <p id = "guessLeft">3</p>
+                <p> Numbers you have guessed </p>
+                <p id = "numbersGuessed"> _ _ _</p>
 
             </div>
     
