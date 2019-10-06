@@ -9,9 +9,9 @@ const winner_span = document.getElementById ("winner");
 //const correctGuess 
 
 // This generates sets the variable = to a random number
-const randomValue = Math.floor(Math.random () * userNumber ) +1 ;
 
-console.log(randomValue);
+
+
 
 // In This prompt after the "string" the + usernumber will pull from the varible we set at the top
 //const guess = prompt ("Please Pick a number between 1 and " + userNumber)
@@ -49,9 +49,12 @@ for (let i = 0; i <= 5; i++){
 
 */
 
-function startGame() {
+const randomValue = Math.floor(Math.random () * userNumber ) +1 ;
 
-    for (let i = 0; i <= 5; i++){
+
+function startGame() {
+             const randomValue = Math.floor(Math.random () * userNumber ) +1 ;
+
              console.log(randomValue);
              const  guess = prompt("Guess a number between 1 and " + userNumber )
             
@@ -60,7 +63,7 @@ function startGame() {
                     console.log("Hooray");
                    // document.write( "You did it!! The magic number was " + randomValue );
                     wins();
-                    break
+                
                   //  myScoreWins ++;
                    // console.log ( "Current Score  " + myScoreWins);
                     
@@ -73,10 +76,11 @@ function startGame() {
     
     }
     
-    }
+    
 
     function wins (){
         myScoreWins ++;
-        winner_span.innerHtml = myScoreWins;
-        
+        winner_span.innerHTML = myScoreWins;
+       
+       
     }
