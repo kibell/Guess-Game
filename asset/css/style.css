@@ -30,3 +30,19 @@ width: 325px;
 {
     margin-left: 45px;
 }
+
+button{
+justify-content: center;
+}
+
+
+p{
+    color:black;
+    font-size: 28px;
+}
+
+#guessLeft
+{
+   
+    font-size:28px;
+}
