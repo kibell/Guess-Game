@@ -1,11 +1,14 @@
-
 //This sets a variable for the usernumber this must be declared before the randomNumber function below
 const userNumber = 10;
 let counter = 0;
 let maxTries = 0;
 let myScoreWins = 0;
 let myScoreLose = 0;
-const winner_span = document.getElementById ("winner");
+let myGuess = 3;
+const winner_span = document.getElementById("winner");
+const loses_span = document.getElementById("loses");
+const guessLeft_span = document.getElementById("guessLeft");
+
 //const correctGuess 
 
 // This generates sets the variable = to a random number
@@ -49,38 +52,71 @@ for (let i = 0; i <= 5; i++){
 
 */
 
-const randomValue = Math.floor(Math.random () * userNumber ) +1 ;
+const randomValue = Math.floor(Math.random() * userNumber) + 1;
+
+
+
 
 
 function startGame() {
-             const randomValue = Math.floor(Math.random () * userNumber ) +1 ;
+    const randomValue = Math.floor(Math.random() * userNumber) + 1;
+    console.log(randomValue);
+    const guess = prompt("Guess a number between 1 and " + userNumber)
 
-             console.log(randomValue);
-             const  guess = prompt("Guess a number between 1 and " + userNumber )
+
+
+    if (guess == randomValue) {
+        console.log("Hooray");
+        // document.write( "You did it!! The magic number was " + randomValue );
+        wins();
+
+        //  myScoreWins ++;
+        // console.log ( "Current Score  " + myScoreWins);
+
+
+    } else {
+        console.log("NOPE!!");
+        lose();
+
+    }
+
+   
+
+
+
+
+
+function wins() {
+   if ( myGuess !== 0){
+       myScoreWins++;
+       winner_span.innerHTML = myScoreWins;
+
+   }
+}
+ 
+
+
+
+function lose() {
+   // myScoreLose++;
+   // myGuess--;
+   // loses_span.innerHTML = myScoreLose;
+  // guessLeft_span.innerHTML = myGuess;
+
+         if  (myGuess !== 1 ){
+            myScoreLose++;
+             myGuess--;
+             loses_span.innerHTML = myScoreLose;
+            guessLeft_span.innerHTML = myGuess;
             
-        
-              if (guess == randomValue) {
-                    console.log("Hooray");
-                   // document.write( "You did it!! The magic number was " + randomValue );
-                    wins();
-                
-                  //  myScoreWins ++;
-                   // console.log ( "Current Score  " + myScoreWins);
-                    
-    
-                } else {
-                    console.log("NOPE!!");
-                  
-                }  
-    
-    
-    }
-    
-    
 
-    function wins (){
-        myScoreWins ++;
-        winner_span.innerHTML = myScoreWins;
-       
-       
-    }
+         } else {
+             document.write ("Gameover")
+         }
+
+
+
+}
+
+
+}

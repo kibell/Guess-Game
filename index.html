@@ -1,54 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Guess number game</title>
 
-
-    <link rel ="stylesheet" href="./asset/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./asset/css/reset.css">
+    <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
-<body>
+
+<body background="./asset/images/100-number.png">
     <!--------------------------------------------->
-    <div class = container>
-        <div class=row> 
-            <div class = col-md-8>
-                
-            <h2>Instructions </h2>
-            <ol>
-                <li>Guess the number I am thinking</li>
-                <li>The Number is between 1 -10</li>
-                <li>Guess correctly and win a prize</li>
-                <li>Click Guess when you are ready to start</li>
-            </ol>
-            <button onclick= "startGame()" >Guess</button>
+    <div class=container style="background: white">
+        <div class=row>
+            <div class=col-md-12>
+
+                <h2>Instructions </h2>
+                <ol>
+                    <li>Guess the number I am thinking</li>
+                    <li>The Number is between 1 -10</li>
+                    <li>Guess correctly and win a prize</li>
+                    <li>Click Guess when you are ready to start</li>
+                </ol>
+                <button onclick=" startGame() ">Guess</button>
             </div>
         </div>
-    <!--------------------------------------------------->
-       
+        <!--------------------------------------------------->
 
 
-        <div class = "row">
-              
-            <div class= col-md-4>
-                <h3>Score</h3>
-                <p>Wins </p> 
-                <span id = "winner"> 0 </span>
-                <p>Loses</p>
-                <p id = "Loses">0 </p>
-                <p>Guesses left</p>
-                <p id = "guessLeft">3</p>
-                <p> Numbers you have guessed </p>
-                <p id = "numbersGuessed"> _ _ _</p>
 
-            </div>
-    
+        <div class="row" style="background: rebeccapurple">
+
             
+            <div class= col-md-12>
                    
-             </div>
+                <h3>Score</h3>
+
+                <div class ="score">
+                     <div class = col-md-6>
+                    <p style="margin-left:25px">Wins </p>
+                    <span id="winner"> 0 </span> 
+                     </div>
+
+                <div class = col-md-6 >
+                     <p style ="margin-left:20px"> Loses</p>
+                    <span id="loses">0 </span>
+                     </div>
+                     </div>
+                </div>
+
+
+
+                <p>Guesses left</p>
+                <span id="guessLeft">3</span>
+                <p> Numbers you have guessed </p>
+                <p id="numbersGuessed"> _ _ _</p>
+
+                
+
+
+
         </div>
+    </div>
 
 
 
@@ -59,12 +75,13 @@
 
 
     </div>
-   <!--------------------------------------------------> 
-    
-   
-        
-        
-        
-    <script type="text/javascript" src="./asset/javascript/game.js"></script> 
+    <!-------------------------------------------------->
+
+
+
+
+
+    <script type="text/javascript" src="./asset/javascript/game.js"></script>
 </body>
+
 </html>
