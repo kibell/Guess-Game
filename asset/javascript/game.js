@@ -91,7 +91,6 @@ switch(answer)
 
 
 
-
 //compare computer guess with user input
 
 
@@ -122,6 +121,7 @@ switch(answer)
 
 
 
+//code errors below (references)-------------------------------
 
 //const correctGuess 
 
