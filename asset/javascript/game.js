@@ -42,12 +42,12 @@ const userGuess = document.getElementById("inputType").value;
 
  }  else if ( userGuess < randomNumberGen) {
    
-         showOutput("toLow");
+         showOutput("tooLow");
 
  }
  
  else {
-        showOutput("try again")
+        showOutput("tryAgain")
  }
 
  //display the correct answer
@@ -58,7 +58,24 @@ const userGuess = document.getElementById("inputType").value;
 
 
 //show the output
-function showOutput(answer);
+function showOutput(answer){
+
+    switch(answer)
+    {
+        case "winner":
+            document.getElementById().src
+         case "tooHigh":
+                       
+        case "tooLow":
+                            
+        case "tryAgain":
+    }
+
+
+
+}
+
+
 
 
 //compare computer guess with user input
