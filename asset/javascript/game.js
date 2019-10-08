@@ -8,14 +8,14 @@ let myGuess = 3;
 const winner_span = document.getElementById("winner");
 const loses_span = document.getElementById("loses");
 const guessLeft_span = document.getElementById("guessLeft");
-const rand 
-
+const randomNumberGen = getRandomValue ()
 
 
 //Get random number
+
 function getRandomValue (){
-    
- const rand = math.floor((math.random) * 100 + 1)
+
+ const rand = Math.floor(Math.random() * 100 + 1);
 return rand ;
 }
 
@@ -25,9 +25,40 @@ return rand ;
 //create a user input
 
 function userInput () {
- getElementById("inputType") 
+ //get what it is that the user guess
+const userGuess = document.getElementById("inputType").value;
+
+//alert (userGuess);
+
+
+ //compare it with the random number generator
+ if (userGuess == randomNumberGen ){
+
+         showOutput("winner");
+
+ } else if (userGuess > randomNumberGen) {
+
+         showOutput("toohigh");
+
+ }  else if ( userGuess < randomNumberGen) {
+   
+         showOutput("toLow");
+
+ }
+ 
+ else {
+        showOutput("try again")
+ }
+
+ //display the correct answer
+
+
 
 }
+
+
+//show the output
+function showOutput(answer);
 
 
 //compare computer guess with user input
@@ -47,6 +78,8 @@ function userInput () {
 //score to keep score of wins and loses
 
 
+
+//reset
 
 
 
