@@ -8,6 +8,56 @@ let myGuess = 3;
 const winner_span = document.getElementById("winner");
 const loses_span = document.getElementById("loses");
 const guessLeft_span = document.getElementById("guessLeft");
+const rand 
+
+
+
+//Get random number
+function getRandomValue (){
+    
+ const rand = math.floor((math.random) * 100 + 1)
+return rand ;
+}
+
+
+
+
+//create a user input
+
+function userInput () {
+ getElementById("inputType") 
+
+}
+
+
+//compare computer guess with user input
+
+
+
+//if user wins
+
+
+// if user loses
+
+
+
+//create a guess counter to keep track of the amount of guesses use has left
+
+
+//score to keep score of wins and loses
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //const correctGuess 
 
@@ -52,6 +102,7 @@ for (let i = 0; i <= 5; i++){
 
 */
 
+/*
 const randomValue = Math.floor(Math.random() * userNumber) + 1;
 
 function clickMe(){
@@ -154,3 +205,5 @@ console.log(randomValue);
 function reset (){
     location.reload();
 }
+
+*/

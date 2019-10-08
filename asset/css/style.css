@@ -31,10 +31,15 @@ width: 325px;
     margin-left: 45px;
 }
 
-button{
-justify-content: center;
+#button{
+text-align: center;
+width: 100%;
 }
 
+#inputType{
+    width: 100%;
+
+}
 
 p{
     color:black;
