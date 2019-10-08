@@ -54,12 +54,44 @@ for (let i = 0; i <= 5; i++){
 
 const randomValue = Math.floor(Math.random() * userNumber) + 1;
 
-
+function clickMe(){
+    document.getElementById("button").addEventListener("click",startGame())
+}
 
 
 
 function startGame() {
     const randomValue = Math.floor(Math.random() * userNumber) + 1;
+    
+    console.log(randomValue);
+    const guess = prompt("Guess a number between 1 and " + userNumber)
+
+
+
+     if (guess == randomValue) {
+        console.log("Hooray");
+        // document.write( "You did it!! The magic number was " + randomValue );
+        wins();
+
+        //  myScoreWins ++;
+        // console.log ( "Current Score  " + myScoreWins);
+
+
+         } else {
+             console.log("NOPE!!");
+            // myScoreLose++;
+             myGuess--;
+            // loses_span.innerHTML = myScoreLose;
+            guessLeft_span.innerHTML = myGuess;
+            alert("Guesses Left  " + myGuess )
+            guessWrong();
+             
+             
+        }
+
+
+
+   function guessWrong(){
     console.log(randomValue);
     const guess = prompt("Guess a number between 1 and " + userNumber)
 
@@ -70,17 +102,16 @@ function startGame() {
         // document.write( "You did it!! The magic number was " + randomValue );
         wins();
 
-        //  myScoreWins ++;
-        // console.log ( "Current Score  " + myScoreWins);
-
-
-    } else {
-        console.log("NOPE!!");
-        lose();
-
-    }
-
+   }  else {
    
+    console.log ("try again");
+    
+    
+    myGuess -- ;
+   guessLeft_span.innerHTML = myGuess;
+   alert("Guesses Left  " + myGuess )
+    lost ()
+   }}
 
 
 
@@ -90,33 +121,36 @@ function wins() {
    if ( myGuess !== 0){
        myScoreWins++;
        winner_span.innerHTML = myScoreWins;
-
+       
    }
 }
  
 
 
 
-function lose() {
-   // myScoreLose++;
-   // myGuess--;
-   // loses_span.innerHTML = myScoreLose;
-  // guessLeft_span.innerHTML = myGuess;
 
-         if  (myGuess !== 1 ){
-            myScoreLose++;
-             myGuess--;
-             loses_span.innerHTML = myScoreLose;
-            guessLeft_span.innerHTML = myGuess;
-            
-
-         } else {
-             document.write ("Gameover")
-         }
+function lost(){
+alert("FINAL GUESS")
+console.log(randomValue);
+    const guess = prompt("Guess a number between 1 and " + userNumber)
 
 
+
+    if (guess == randomValue) {
+        console.log("Hooray");
+        // document.write( "You did it!! The magic number was " + randomValue );
+        wins();
+
+   }  else {
+       document.write( "game over press any key to cont.")
+       myScoreLose++;
+       loses_span.innerHTML = myScoreLose;
+       onkeyup = reset();
+}
+}
 
 }
 
-
+function reset (){
+    location.reload();
 }
