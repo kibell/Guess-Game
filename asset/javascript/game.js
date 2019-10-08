@@ -50,7 +50,7 @@ const userGuess = document.getElementById("inputType").value;
         showOutput("tryAgain")
  }
 
- //display the correct answer
+ 
 
 
 
@@ -60,18 +60,32 @@ const userGuess = document.getElementById("inputType").value;
 //show the output
 function showOutput(answer){
 
-    switch(answer)
+
+switch(answer)
     {
         case "winner":
-            document.getElementById().src
-         case "tooHigh":
-                       
+                document.getElementById("image").src ="./asset/images/win.jpg";
+                document.getElementById("startText").textContent = "You Win!!"
+                break
+
+         case "toohigh":
+                document.getElementById("image").src ="./asset/images/TooHigh.png" ; 
+                document.getElementById("startText").textContent = "Too High!!"
+                break
+
         case "tooLow":
-                            
+                document.getElementById("image").src ="./asset/images/tooLow.png" ;
+                document.getElementById("startText").textContent = "You Low!!"  
+                break 
+
+
         case "tryAgain":
-    }
+                document.getElementById("image").src ="./asset/images/TryAgain.png";
+                document.getElementById("startText").textContent = "Try that again!"
+                break
+    } 
 
-
+    
 
 }
 
