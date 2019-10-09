@@ -5,9 +5,9 @@ let maxTries = 0;
 let myScoreWins = 0;
 let myScoreLose = 0;
 let myGuess = 3;
-const winner_span = document.getElementById("winner");
-const loses_span = document.getElementById("loses");
-const guessLeft_span = document.getElementById("guessLeft");
+//const winme_span = document.getElementById("winme").textContent ;
+//const loses_span = document.getElementById("loses");
+//const guessLeft_span = document.getElementById("guessLeft");
 const randomNumberGen = getRandomValue ()
 
 
@@ -27,7 +27,7 @@ return rand ;
 function userInput () {
  //get what it is that the user guess
 const userGuess = document.getElementById("inputType").value;
-
+console.log( randomNumberGen) ;
 //alert (userGuess);
 
 
@@ -63,9 +63,13 @@ function showOutput(answer){
 
 switch(answer)
     {
+        //if user wins
         case "winner":
                 document.getElementById("image").src ="./asset/images/win.jpg";
-                document.getElementById("startText").textContent = "You Win!!"
+                document.getElementById("startText").textContent = "You Win!!";
+                myScoreWins ++ ;
+                document.getElementById("winme").innerHTML = myScoreWins; 
+                console.log(myScoreWins);
                 break
 
          case "toohigh":
@@ -91,11 +95,10 @@ switch(answer)
 
 
 
-//compare computer guess with user input
 
 
 
-//if user wins
+
 
 
 // if user loses
