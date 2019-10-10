@@ -19,12 +19,14 @@
         <div class=row>
             <div class=col-md-12>
 
-                <h2>Instructions </h2>
-                <ol>
+                <h2 style="font-family: 'Mansalva', cursive;">Instructions </h2>
+                <ol style="font-family: 'Mansalva', cursive;">
                     <li>Let's play!!</li>
                     <li> Guess a Number  between 1 -100</li>
                     <li>You will have 7 attempts to get it correctly</li>
-                    <li>Click Guess when you are ready to start</li>
+                    <li>Enter the number in the text box below</li>
+                    <li>Click Guess to enter your guess</li>
+                    <li>Play close attention to the clues</li>
                 </ol>
                 
             </div>
@@ -33,21 +35,21 @@
 
 
 
-        <div class="row" style="background: rebeccapurple">
+        <div class="row" style="background: blue">
 
             
             <div class= col-md-12>
                    
-                <h3>Score</h3>
+                <h3 style="font-family: 'Mansalva', cursive;">Score</h3>
 
-                <div class ="score">
+                <div style="font-family: 'Mansalva', cursive;" class ="score">
                      <div class = col-md-6>
-                    <p style="margin-left:25px">Wins </p>
+                    <p style="margin-left:25px; font-family: 'Mansalva', cursive;">Wins </p>
                     <span id="winme"> 0 </span> 
                      </div>
 
                 <div class = col-md-6 >
-                     <p style ="margin-left:20px"> Loses</p>
+                     <p style ="margin-left:20px; font-family: 'Mansalva', cursive;"> Loses</p>
                     <span id="loses">0 </span>
                      </div>
                      </div>
@@ -62,8 +64,8 @@
 
                 <p id = "startText" style =" margin-right: 25px ; "> Let's A Gooo! </p>
                 <br>
-                <p>Attempt Remaining</p>
-                <p id = "attemptsLeft">  7 </p>
+                <p style="font-family: 'Mansalva', cursive;">Attempt Remaining</p>
+                <p id = "attemptsLeft" style="font-family: 'Mansalva', cursive;">  7 </p>
                 </div>
                 </div>
 
@@ -77,9 +79,12 @@
                 <input id="inputType" ></input>
                 <br>
                 <br>
-                <button id ="button" onclick="userInput();">Guess</button>
+                <button style="font-family: 'Mansalva', cursive;" ; id ="button" onclick="userInput();">Guess</button>
 
-
+                            <br>
+               
+                <button style="font-family: 'Mansalva', cursive;" ; id ="startOver" onclick="startOver();">Play Again</button>
+                </div>
             </div>
             </div>
 

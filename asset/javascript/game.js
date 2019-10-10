@@ -1,5 +1,5 @@
 //This sets a variable for the usernumber this must be declared before the randomNumber function below
-const userNumber = 10;
+
 let counter = 0;
 let maxTries = 0;
 let myScoreWins = 0;
@@ -17,10 +17,12 @@ function getRandomValue (){
 
  const rand = Math.floor(Math.random() * 100 + 1);
 return rand ;
+
 }
 
-
-
+function startOver(){
+location.reload();
+}
 
 //create a user input
 
@@ -65,11 +67,15 @@ switch(answer)
     {
         //if user wins
         case "winner":
+            myGuess = 7
                 document.getElementById("image").src ="./asset/images/win.jpg";
                 document.getElementById("startText").textContent = "You Win!!";
                 myScoreWins ++ ;
                 document.getElementById("winme").innerHTML = myScoreWins; 
-                console.log(myScoreWins);
+                document.getElementById("attemptsLeft").innerHTML = myGuess; 
+                
+            
+              //  console.log(myScoreWins);
                 break
 
          case "toohigh":
@@ -98,13 +104,16 @@ switch(answer)
 
     if(myGuess === 0){
         myScoreLose ++;
+        myGuess = 7
         document.getElementById("loses").innerHTML = myScoreLose;
-        document.getElementById("startText").textContent = "You Lost!! BWHAHAHAH"
-        document.getElementById("image").src = "./asset/images/GameOver.jpg"
+        document.getElementById("startText").textContent = "You Lost!! BWHAHAHAH";
+        document.getElementById("image").src = "./asset/images/GameOver.jpg";
+        confirm("Sorry you lost :( to play again click OK");
+        document.getElementById("attemptsLeft").innerHTML = myGuess; 
 
     }
     
-
+   
 }
 
 
