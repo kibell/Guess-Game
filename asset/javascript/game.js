@@ -95,6 +95,14 @@ switch(answer)
                 break
     } 
 
+
+    if(myGuess === 0){
+        myScoreLose ++;
+        document.getElementById("loses").innerHTML = myScoreLose;
+        document.getElementById("startText").textContent = "You Lost!! BWHAHAHAH"
+        document.getElementById("image").src = "./asset/images/GameOver.jpg"
+
+    }
     
 
 }
@@ -104,10 +112,8 @@ switch(answer)
 
 
 
+// if run out of attempts
 
-
-
-// if user loses
 
 
 
