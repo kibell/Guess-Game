@@ -8,51 +8,49 @@ let myGuess = 7;
 //const winme_span = document.getElementById("winme").textContent ;
 //const loses_span = document.getElementById("loses");
 //const guessLeft_span = document.getElementById("guessLeft");
-const randomNumberGen = getRandomValue ()
+const randomNumberGen = getRandomValue()
 
 
 //Get random number
 
-function getRandomValue (){
+function getRandomValue() {
 
- const rand = Math.floor(Math.random() * 100 + 1);
-return rand ;
+    const rand = Math.floor(Math.random() * 100 + 1);
+    return rand;
 
 }
 
-function startOver(){
-location.reload();
+function startOver() {
+    location.reload();
 }
 
 //create a user input
 
-function userInput () {
- //get what it is that the user guess
-const userGuess = document.getElementById("inputType").value;
-console.log( randomNumberGen) ;
-//alert (userGuess);
+function userInput() {
+    //get what it is that the user guess
+    const userGuess = document.getElementById("inputType").value;
+    console.log(randomNumberGen);
+    //alert (userGuess);
 
 
- //compare it with the random number generator
- if (userGuess == randomNumberGen ){
+    //compare it with the random number generator
+    if (userGuess == randomNumberGen) {
 
-         showOutput("winner");
+        showOutput("winner");
 
- } else if (userGuess > randomNumberGen) {
+    } else if (userGuess > randomNumberGen) {
 
-         showOutput("toohigh");
+        showOutput("toohigh");
 
- }  else if ( userGuess < randomNumberGen) {
-   
-         showOutput("tooLow");
+    } else if (userGuess < randomNumberGen) {
 
- }
- 
- else {
+        showOutput("tooLow");
+
+    } else {
         showOutput("tryAgain")
- }
+    }
 
- 
+
 
 
 
@@ -60,60 +58,59 @@ console.log( randomNumberGen) ;
 
 
 //show the output
-function showOutput(answer){
+function showOutput(answer) {
 
 
-switch(answer)
-    {
+    switch (answer) {
         //if user wins
         case "winner":
             myGuess = 7
-                document.getElementById("image").src ="./asset/images/win.jpg";
-                document.getElementById("startText").textContent = "You Win!!";
-                myScoreWins ++ ;
-                document.getElementById("winme").innerHTML = myScoreWins; 
-                document.getElementById("attemptsLeft").innerHTML = myGuess; 
-                
-            
-              //  console.log(myScoreWins);
-                break
+            document.getElementById("image").src = "./asset/images/win.jpg";
+            document.getElementById("startText").textContent = "You Win!!";
+            myScoreWins++;
+            document.getElementById("winme").innerHTML = myScoreWins;
+            document.getElementById("attemptsLeft").innerHTML = myGuess;
 
-         case "toohigh":
-                document.getElementById("image").src ="./asset/images/TooHigh.png" ; 
-                document.getElementById("startText").textContent = "Too High!!"
-                myGuess -- ;
-                document.getElementById("attemptsLeft").innerHTML = myGuess;
-                break
+
+            //  console.log(myScoreWins);
+            break
+
+        case "toohigh":
+            document.getElementById("image").src = "./asset/images/TooHigh.png";
+            document.getElementById("startText").textContent = "Too High!!"
+            myGuess--;
+            document.getElementById("attemptsLeft").innerHTML = myGuess;
+            break
 
         case "tooLow":
-                document.getElementById("image").src ="./asset/images/tooLow.png" ;
-                document.getElementById("startText").textContent = "You Low!!" 
-                myGuess -- ;
-                document.getElementById("attemptsLeft").innerHTML = myGuess; 
-                break 
+            document.getElementById("image").src = "./asset/images/tooLow.png";
+            document.getElementById("startText").textContent = "You Low!!"
+            myGuess--;
+            document.getElementById("attemptsLeft").innerHTML = myGuess;
+            break
 
 
         case "tryAgain":
-                document.getElementById("image").src ="./asset/images/TryAgain.png";
-                document.getElementById("startText").textContent = "Try that again!"
-                myGuess -- ;
-                document.getElementById("attemptsLeft").innerHTML = myGuess;    
-                break
-    } 
+            document.getElementById("image").src = "./asset/images/TryAgain.png";
+            document.getElementById("startText").textContent = "Try that again!"
+            myGuess--;
+            document.getElementById("attemptsLeft").innerHTML = myGuess;
+            break
+    }
 
 
-    if(myGuess === 0){
-        myScoreLose ++;
+    if (myGuess === 0) {
+        myScoreLose++;
         myGuess = 7
         document.getElementById("loses").innerHTML = myScoreLose;
         document.getElementById("startText").textContent = "You Lost!! BWHAHAHAH";
         document.getElementById("image").src = "./asset/images/GameOver.jpg";
-        confirm("Sorry you lost :( to play again click OK");
-        document.getElementById("attemptsLeft").innerHTML = myGuess; 
+        confirm("Sorry you lost :( the number you wanted was  " + randomNumberGen );
+        document.getElementById("attemptsLeft").innerHTML = myGuess;
 
     }
-    
-   
+
+
 }
 
 
