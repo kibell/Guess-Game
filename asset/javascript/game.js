@@ -4,7 +4,7 @@ let counter = 0;
 let maxTries = 0;
 let myScoreWins = 0;
 let myScoreLose = 0;
-let myGuess = 3;
+let myGuess = 7;
 //const winme_span = document.getElementById("winme").textContent ;
 //const loses_span = document.getElementById("loses");
 //const guessLeft_span = document.getElementById("guessLeft");
@@ -75,17 +75,23 @@ switch(answer)
          case "toohigh":
                 document.getElementById("image").src ="./asset/images/TooHigh.png" ; 
                 document.getElementById("startText").textContent = "Too High!!"
+                myGuess -- ;
+                document.getElementById("attemptsLeft").innerHTML = myGuess;
                 break
 
         case "tooLow":
                 document.getElementById("image").src ="./asset/images/tooLow.png" ;
-                document.getElementById("startText").textContent = "You Low!!"  
+                document.getElementById("startText").textContent = "You Low!!" 
+                myGuess -- ;
+                document.getElementById("attemptsLeft").innerHTML = myGuess; 
                 break 
 
 
         case "tryAgain":
                 document.getElementById("image").src ="./asset/images/TryAgain.png";
                 document.getElementById("startText").textContent = "Try that again!"
+                myGuess -- ;
+                document.getElementById("attemptsLeft").innerHTML = myGuess;    
                 break
     } 
 
